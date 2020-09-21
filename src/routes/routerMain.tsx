@@ -5,7 +5,7 @@ import { StatusBar } from 'react-native';
 import Home from '../pages/Home';
 import Wellcome from '../pages/Wellcome';
 import Info from '../pages/Info';
-
+import Tips from '../pages/Tips';
 const AppStack = createStackNavigator();
 function RouterMain() {
     return (
@@ -32,6 +32,13 @@ function RouterMain() {
                     }}
                     component={Info}
                     name='Info'
+                />
+                <AppStack.Screen
+                    options={{
+                        headerShown: true,
+                    }}
+                    component={Tips}
+                    name='Tips'
                 />
             </AppStack.Navigator>
         </NavigationContainer>
