@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: width * 0.15,
         backgroundColor: '#E5E5E5',
-        borderTopWidth: 0.5,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',

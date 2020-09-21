@@ -30,7 +30,7 @@ const Wellcome: React.FC = () => {
                 <View style={[styles.gridCollumm, { height: '18%', top: Platform.OS == 'android' ? 12 : 0 }]}>
                     <Image style={styles.imageContainer} resizeMode={'contain'} source={IfacLogo} />
                     <View style={styles.betaView}>
-                       <Text style={styles.betaText}>BETA 1.0</Text> 
+                        <Text style={styles.betaText}>BETA 1.0</Text>
                     </View>
                 </View>
                 <View style={styles.gridCollumm}>
@@ -100,7 +100,7 @@ const Wellcome: React.FC = () => {
                                 placeholder={'Digite seu nome'}
                             />
                         </View>}
-                    <View style={styles.viewBackView}>
+                    <View style={[styles.viewBackView, isNext ? {} : { justifyContent: 'center' }]}>
                         <TouchableOpacity onPress={() => isNext ? navigation.navigate('Home') : setIsNext(true)} activeOpacity={0.6} style={styles.buttonArrow}>
                             <Icon.MaterialIcons name='keyboard-arrow-right' size={width * 0.1} color={'white'} />
                         </TouchableOpacity>

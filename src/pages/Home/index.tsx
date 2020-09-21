@@ -70,7 +70,7 @@ const Home: React.FC = () => {
                     </View>
                 </View>
             </View>
-            <View style={styles.tab}>
+            <View style={[styles.tab]}>
                 <Image style={styles.iconBar} source={CallIcon} />
                 <Image style={styles.iconBar} source={HomeIcon} />
                 <TouchableWithoutFeedback onPress={handleInfo}>

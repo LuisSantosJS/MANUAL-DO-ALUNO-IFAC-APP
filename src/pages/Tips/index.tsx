@@ -54,7 +54,7 @@ const Tips: React.FC = () => {
                             algumas dicas para você estudante.
                  </Text>}
                     <TouchableOpacity onPress={() => setIsNext(!isNext)} activeOpacity={0.6} style={styles.buttonArrow}>
-                        <Icon.MaterialIcons name='keyboard-arrow-right' size={width * 0.1} color={'white'} />
+                        <Icon.MaterialIcons name={isNext  ?'keyboard-arrow-left': 'keyboard-arrow-right'} size={width * 0.1} color={'white'} />
                     </TouchableOpacity>
                 </View>
             </View>
