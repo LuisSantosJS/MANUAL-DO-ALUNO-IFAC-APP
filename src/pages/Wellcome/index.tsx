@@ -27,7 +27,7 @@ const Wellcome: React.FC = () => {
         <>
             <View style={{ width: '100%', backgroundColor: 'white', height: getStatusBarHeight(true) }} />
             <View style={styles.container}>
-                <View style={[styles.gridCollumm, { height: '20%' }]}>
+                <View style={[styles.gridCollumm, { height: '18%', top: Platform.OS == 'android' ? 12 : 0 }]}>
                     <Image style={styles.imageContainer} resizeMode={'contain'} source={IfacLogo} />
                     <View style={styles.betaView}>
                        <Text style={styles.betaText}>BETA 1.0</Text> 
