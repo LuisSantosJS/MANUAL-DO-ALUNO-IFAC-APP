@@ -82,6 +82,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#6CECA8',
         alignItems:'center',
         justifyContent:'center'
+    },
+    betaView:{
+        width:width*0.3,
+        height: width*0.08,
+        borderRadius: width*0.1,
+        backgroundColor:'#6CECA8',
+        alignItems:'center',
+        justifyContent:'center'
+
+    },
+    betaText:{
+        color: 'white'
     }
 });
 export default styles;

@@ -12,19 +12,26 @@ import styles from './styles';
 import Icon from '../../assets/icons/icons';
 import { useNavigation } from '@react-navigation/native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+
 const IfacLogo = require('../../assets/ifac.png');
 const Inicial = require('../../assets/inicial.png');
 const Person = require('../../assets/person.png')
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
+
 const Wellcome: React.FC = () => {
     const navigation = useNavigation();
     const [isNext, setIsNext] = useState<boolean>(false);
     return (
         <>
+            <View style={{ width: '100%', backgroundColor: 'white', height: getStatusBarHeight(true) }} />
             <View style={styles.container}>
                 <View style={[styles.gridCollumm, { height: '20%' }]}>
                     <Image style={styles.imageContainer} resizeMode={'contain'} source={IfacLogo} />
+                    <View style={styles.betaView}>
+                       <Text style={styles.betaText}>BETA 1.0</Text> 
+                    </View>
                 </View>
                 <View style={styles.gridCollumm}>
                     <Image style={styles.imageContainerInicial} resizeMode={'contain'} source={Inicial} />
@@ -48,13 +55,13 @@ const Wellcome: React.FC = () => {
                             <DropDownPicker
                                 items={[
                                     { label: 'SELECIONE SEU CURSO', value: 'SELECIONE SEU CURSO', },
-                                    { label: 'REDES DE COMPUATADORES', value: 'REDES DE COMPUTADORES'},
-                                    { label: 'INFORMÁTICA', value: 'INFORMATICA'},
-                                    { label: 'EDIFICAÇÕES', value: 'EDIFICACOES'},
+                                    { label: 'REDES DE COMPUATADORES', value: 'REDES DE COMPUTADORES' },
+                                    { label: 'INFORMÁTICA', value: 'INFORMATICA' },
+                                    { label: 'EDIFICAÇÕES', value: 'EDIFICACOES' },
                                 ]}
                                 defaultValue={'SELECIONE SEU CURSO'}
-                                containerStyle={{ height:'100%', width:'100%'}}
-     
+                                containerStyle={{ height: '100%', width: '100%' }}
+
                                 itemStyle={{
                                     justifyContent: 'flex-start'
                                 }}
@@ -67,17 +74,17 @@ const Wellcome: React.FC = () => {
                             <DropDownPicker
                                 items={[
                                     { label: 'PERIODO/ANO', value: 'PERIODO/ANO', },
-                                    { label: '2017', value: '2017'},
-                                    { label: '2018', value: '2018'},
-                                    { label: '2019', value: '2019'},
-                                    { label: '2020', value: '2020'},
+                                    { label: '2017', value: '2017' },
+                                    { label: '2018', value: '2018' },
+                                    { label: '2019', value: '2019' },
+                                    { label: '2020', value: '2020' },
                                 ]}
                                 defaultValue={'PERIODO/ANO'}
-                                containerStyle={{ height:'100%', width:'100%'}}
+                                containerStyle={{ height: '100%', width: '100%' }}
                                 itemStyle={{
                                     justifyContent: 'flex-start'
                                 }}
-                                
+
                                 dropDownStyle={{ backgroundColor: '#E5E5E5' }}
                                 onChangeItem={item => console.log(item)
                                 }
