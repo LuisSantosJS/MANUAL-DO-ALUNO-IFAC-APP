@@ -22,6 +22,9 @@ const Home: React.FC = () => {
     const handleInfo = () =>{
         navigation.navigate('Info')
     }
+    const handleTips = () =>{
+        navigation.navigate('Tips')
+    }
     return (
         <>
             <View style={{ width: '100%', backgroundColor: '#6CECA8', height: getStatusBarHeight(true) }} />
@@ -59,7 +62,7 @@ const Home: React.FC = () => {
                                 <Image style={styles.itemImageItem} resizeMode={'contain'} source={Virus} />
                                 <Text style={styles.textItem}>Regulamentos</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity activeOpacity={0.8} style={styles.itemButtom}>
+                            <TouchableOpacity onPress={handleTips} activeOpacity={0.8} style={styles.itemButtom}>
                                 <Image style={styles.itemImageItem} resizeMode={'contain'} source={Dicas} />
                                 <Text style={styles.textItem}>Dicas</Text>
                             </TouchableOpacity>

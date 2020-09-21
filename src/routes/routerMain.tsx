@@ -36,6 +36,9 @@ function RouterMain() {
                 <AppStack.Screen
                     options={{
                         headerShown: true,
+                        title: 'Informações',
+                        headerBackTitle: '',
+                        headerBackTitleVisible: false
                     }}
                     component={Tips}
                     name='Tips'
