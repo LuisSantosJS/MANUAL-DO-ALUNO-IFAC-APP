@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
 const styles = StyleSheet.create({
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         borderRadius: (width * 0.15) / 2,
         backgroundColor: '#4CDF83',
         left: width - (width*0.18),
-        top: height - (width*0.30),
+        top: Platform.OS == 'ios' ? height - (width*0.30) :height - (width*0.20) ,
         elevation: 2000,
         shadowOffset: { width: 8, height: 8 },
         shadowColor: "black",

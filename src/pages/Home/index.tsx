@@ -31,12 +31,12 @@ const Home: React.FC = () => {
             <StatusBar backgroundColor={'#6CECA8'} barStyle={'dark-content'} />
             <View style={styles.container}>
                 <View style={styles.containerHeaderView}>
-                    <Text style={styles.textHeader}>
+                    {/* <Text style={styles.textHeader}>
                         MANUAL DO ALUNO
                 </Text>
                     <Text style={styles.textHeaderSub}>
                         INSTITUTO FEDERAL - AC
-                </Text>
+                </Text> */}
                 </View>
                 <View style={styles.viewer}>
                     <View style={styles.containerAvatar}>
